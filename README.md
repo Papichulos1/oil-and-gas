@@ -1,0 +1,263 @@
+index.html
+/assets/logo.png
+/scripts/lang.js
+/styles/style.css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background: #0c2340;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 60px;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-switch button {
+  background: none;
+  border: 1px solid #FFD700;
+  color: #FFD700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lang-switch button.active, 
+.lang-switch button:hover {
+  background-color: #FFD700;
+  color: #0c2340;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1600&q=80') center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #FFD700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 20px auto 0;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #0c2340;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background: #f5f5f5;
+  border-left: 5px solid #FFD700;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+footer {
+  background: #0c2340;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact button {
+  background-color: #0c2340;
+  color: #FFD700;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #FFD700;
+  color: #0c2340;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+const content = {
+  en: {
+    heroTitle: "ASPAN HOLDINGS LLP",
+    heroTagline: "Powering Kazakhstan’s Future in Oil, Gas & Energy",
+    about: "ASPAN HOLDINGS LLP is a Kazakhstan-based oil, gas, and energy company dedicated to delivering reliable energy solutions through innovation, integrity, and sustainability.",
+    address: "Kazakhstan, Aktobe region, Aktobe city, Astana district, Altyn Orda microdistrict, building 13D, n.p. 8, postal code 030000",
+    servicesTitle: "Our Operations",
+    service1: "Exploration & Production",
+    service2: "Refining & Logistics",
+    service3: "Renewable & Clean Energy",
+    head: "Head: Makhатов Almas Tazhibaevich",
+    contact: "Contact Us"
+  },
+  kz: {
+    heroTitle: "ASPAN HOLDINGS ЖШС",
+    heroTagline: "Қазақстанның мұнай, газ және энергия болашағын қамтамасыз етеміз",
+    about: "ASPAN HOLDINGS ЖШС — Қазақстандағы мұнай, газ және энергия саласында жұмыс істейтін компания. Біз инновация мен тұрақтылыққа сүйене отырып сенімді энергия шешімдерін ұсынамыз.",
+    address: "Қазақстан, Ақтөбе облысы, Ақтөбе қаласы, Астана ауданы, Алтын Орда шағын ауданы, 13Д үй, пәтер 8, 030000",
+    servicesTitle: "Біздің қызметтер",
+    service1: "Барлау және өндіру",
+    service2: "Мұнай өңдеу және логистика",
+    service3: "Жаңартылатын және таза энергия",
+    head: "Басшысы: Махатов Алмас Тажибаевич",
+    contact: "Байланыс"
+  },
+  ru: {
+    heroTitle: "ТОО ASPAN HOLDINGS",
+    heroTagline: "Энергия и развитие Казахстана в сфере нефти, газа и энергетики",
+    about: "ASPAN HOLDINGS — казахстанская компания в сфере нефти, газа и энергетики. Мы обеспечиваем надёжные и инновационные решения с акцентом на устойчивое развитие.",
+    address: "Казахстан, Актюбинская область, г. Актобе, район Астана, микрорайон Алтын Орда, дом 13Д, кв. 8, индекс 030000",
+    servicesTitle: "Наши направления",
+    service1: "Разведка и добыча",
+    service2: "Переработка и логистика",
+    service3: "Возобновляемая и чистая энергия",
+    head: "Руководитель: Махатов Алмас Тажибаевич",
+    contact: "Связаться с нами"
+  }
+};
+
+function setLang(lang) {
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    el.textContent = content[lang][key];
+  });
+
+  document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+window.onload = () => setLang('en');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASPAN HOLDINGS LLP | Oil, Gas & Energy</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="ASPAN HOLDINGS LLP Logo">
+    <div class="lang-switch">
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+      <button data-lang="kz" onclick="setLang('kz')">KZ</button>
+      <button data-lang="ru" onclick="setLang('ru')">RU</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 data-key="heroTitle"></h1>
+    <p data-key="heroTagline"></p>
+  </section>
+
+  <section class="about">
+    <h2>About</h2>
+    <p data-key="about"></p>
+    <p><strong>Address:</strong> <span data-key="address"></span></p>
+    <p><strong>BEAN:</strong> 100240003418 &nbsp;&nbsp; | &nbsp;&nbsp; <strong>KATO:</strong> 151011100</p>
+  </section>
+
+  <section class="services">
+    <h2 data-key="servicesTitle"></h2>
+    <div class="service-grid">
+      <div class="service"><h3 data-key="service1"></h3></div>
+      <div class="service"><h3 data-key="service2"></h3></div>
+      <div class="service"><h3 data-key="service3"></h3></div>
+    </div>
+  </section>
+
+  <section class="leadership">
+    <h2>Leadership</h2>
+    <p data-key="head"></p>
+  </section>
+
+  <section class="contact">
+    <h2 data-key="contact"></h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <iframe src="https://www.google.com/maps?q=Aktobe%20Kazakhstan&output=embed" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    <p><strong>ASPAN HOLDINGS LLP</strong></p>
+    <p>BEAN: 100240003418 | KATO: 151011100</p>
+    <p>© 2025 ASPAN HOLDINGS LLP. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/lang.js"></script>
+</body>
+</html>
+
